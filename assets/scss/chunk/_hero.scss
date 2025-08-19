@@ -1,4 +1,6 @@
 .hero {
+	position: relative;
+	z-index: 5;
 	display: flex;
 	align-items: end;
 	padding-left: 80px;

@@ -25,6 +25,7 @@ export function initSwiper() {
 	new Swiper('.events__slider', {
 		modules: [Navigation],
 		loop: true,
+		centeredSlides: true,
 		slidesPerView: 1,
 		spaceBetween: 10,
 		navigation: {

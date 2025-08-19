@@ -84,8 +84,6 @@
 	&-events {
 		position: relative;
 
-		// padding-bottom: 200px;
-
 		&::after {
 			content: '';
 			position: absolute;
@@ -100,14 +98,6 @@
 			background-repeat: no-repeat;
 		}
 	}
-
-	// &-halls {
-	// 	padding-top: 0;
-	// }
-
-	// &-service {
-	// 	padding-bottom: 0;
-	// }
 
 	&-banquet {
 		position: relative;
@@ -128,10 +118,6 @@
 			background-repeat: no-repeat;
 		}
 	}
-
-	// &-job {
-	// 	padding-top: 0;
-	// }
 
 	&.light-blue {
 		position: relative;

@@ -55,9 +55,6 @@
 
 .section {
 	padding: 125px 0;
-	background-position: top;
-	background-size: cover;
-	background-repeat: no-repeat;
 
 	&-hero {
 		position: relative;
@@ -86,7 +83,8 @@
 
 	&-events {
 		position: relative;
-		padding-bottom: 200px;
+
+		// padding-bottom: 200px;
 
 		&::after {
 			content: '';
@@ -103,13 +101,13 @@
 		}
 	}
 
-	&-halls {
-		padding-top: 0;
-	}
+	// &-halls {
+	// 	padding-top: 0;
+	// }
 
-	&-service {
-		padding-bottom: 0;
-	}
+	// &-service {
+	// 	padding-bottom: 0;
+	// }
 
 	&-banquet {
 		position: relative;
@@ -131,8 +129,68 @@
 		}
 	}
 
-	&-job {
-		padding-top: 0;
+	// &-job {
+	// 	padding-top: 0;
+	// }
+
+	&.light-blue {
+		position: relative;
+		overflow: visible;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: -1;
+			width: 2350px;
+			height: 2000px;
+			background-image: url('@img/general/light-blue.webp');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&.light-purple {
+		position: relative;
+		overflow: visible;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: -1;
+			width: 2350px;
+			height: 2000px;
+			background-image: url('@img/general/light-purple.webp');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&.light-big-blue {
+		position: relative;
+		overflow: visible;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: -1;
+			width: 1920px;
+			height: 2220px;
+			background-image: url('@img/general/light-big-blue.webp');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: translate(-50%, -50%);
+		}
 	}
 }
 

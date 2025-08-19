@@ -1,19 +1,95 @@
+/* stylelint-disable prettier/prettier */
+@use 'mixins/adaptive-font' as *;
+
 .header {
-	position: static;
+	position: absolute;
+	left: 0;
+	top: 0;
 	z-index: 10;
+	padding: 20px 0;
 	width: 100%;
-	background-color: var(--accent-color);
 
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-top: 15px;
-		padding-bottom: 15px;
+		padding: 0 20px;
+		max-width: 1920px;
 	}
 
-	&--sticky {
-		position: sticky;
-		transition: top 0.3s;
+	&__links {
+		z-index: 20;
+		display: flex;
+		gap: 50px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 7px;
+	}
+
+	&__phone {
+		position: relative;
+		font-family: var(--font-third);
+		font-weight: 600;
+		line-height: 125%;
+		letter-spacing: -0.72px;
+		color: var(--light-color);
+		transition: filter var(--time);
+		@include adaptive-font(24, 15);
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -40px;
+			top: 50%;
+			width: 20px;
+			height: 20px;
+			background-image: url('@img/icons/sprite.svg#phone');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: translateY(-50%);
+		}
+
+		&:hover {
+			filter: brightness(0.8);
+		}
+	}
+
+	&__feedback {
+		font-family: var(--font-second);
+		font-weight: 600;
+		line-height: 210%;
+		text-decoration-style: solid;
+		text-decoration-line: underline;
+		text-underline-position: from-font;
+		color: var(--accent-color);
+		text-decoration-skip-ink: auto;
+		text-decoration-thickness: auto;
+		text-underline-offset: auto;
+		transition: filter var(--time);
+		@include adaptive-font(15, 10);
+
+		&:hover {
+			filter: brightness(0.8);
+		}
+	}
+
+	&__link {
+		
+		@media (max-width: 768px) {
+			&--desktop {
+				display: none;
+			}
+		}
+
+		@media (min-width: 769px) {
+			&--mobile {
+				display: none;
+			}
+		}
 	}
 }

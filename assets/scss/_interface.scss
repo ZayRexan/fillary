@@ -1,17 +1,7 @@
 @use './chunk/burger-menu';
 @use 'mixins/adaptive-font' as *;
 
-.logo {
-	display: flex;
-	align-items: center;
-
-	&__img {
-		max-width: 200px;
-	}
-}
-
 .menu {
-	position: relative;
 	display: flex;
 	align-items: center;
 
@@ -21,12 +11,41 @@
 			left: -100%;
 			top: 0;
 			z-index: 5;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 			overflow: auto;
+			overflow: hidden;
 			padding: 100px 30px 30px;
 			width: 100%;
 			height: 100vh;
-			background-color: var(--accent-color);
+			background: rgb(2 0 15 / 85%);
 			transition: left 0.3s;
+			gap: 75px;
+			backdrop-filter: blur(22.5px);
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 830px;
+				height: 830px;
+				background-image: url('@img/general/light-circle.webp');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			&::before {
+				left: 160px;
+				top: -500px;
+			}
+
+			&::after {
+				right: -330px;
+				bottom: -450px;
+			}
 		}
 
 		&--active {
@@ -35,20 +54,35 @@
 	}
 
 	&__list {
+		position: relative;
+		z-index: 2;
 		display: flex;
 		align-items: center;
-		gap: 15px;
+		gap: 25px;
 
 		&--mobile {
 			flex-direction: column;
 		}
+
+		@media (max-width: 768px) {
+			gap: 15px;
+		}
 	}
 
 	&__link {
-		transition: opacity var(--time);
+		line-height: 100%;
+		text-decoration-style: solid;
+		text-underline-position: from-font;
+		color: var(--light-color);
+		transition: color var(--time);
+		text-decoration-skip-ink: auto;
+		text-decoration-thickness: auto;
+		text-underline-offset: auto;
+		@include adaptive-font(48, 24);
 
 		&:hover {
-			opacity: 0.5;
+			text-decoration-line: underline;
+			color: var(--accent-color);
 		}
 	}
 }
@@ -282,6 +316,18 @@
 
 	&:hover {
 		background-color: var(--hover-accent-color);
+	}
+
+	&--blue-transparent {
+		border: 2px solid var(--second-accent-color);
+		padding: 25px 65px;
+		color: var(--light-color);
+		background-color: transparent;
+		transition: background-color var(--time);
+
+		&:hover {
+			background-color: var(--second-accent-color);
+		}
 	}
 
 	@media (max-width: 768px) {

@@ -31,12 +31,12 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 	min-height: 100%;
 }
 
 .main {
 	flex: 1 1 auto;
-	overflow: hidden;
 }
 
 .container {

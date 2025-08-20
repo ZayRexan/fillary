@@ -318,6 +318,10 @@
 		background-color: var(--hover-accent-color);
 	}
 
+	&--big-padding {
+		padding: 40px 70px;
+	}
+
 	&--blue-transparent {
 		border: 2px solid var(--second-accent-color);
 		padding: 25px 65px;

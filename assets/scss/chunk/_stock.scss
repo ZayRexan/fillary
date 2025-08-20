@@ -1,6 +1,7 @@
 .stock {
 	&__slider {
-		/* stylelint-disable-next-line at-rule-empty-line-before */
+		margin-bottom: 70px;
+
 		@media (max-width: 992px) {
 			height: 600px;
 		}
@@ -17,5 +18,11 @@
 			margin: 0 auto;
 			border-radius: 35px;
 		}
+	}
+
+	&__link {
+		display: block;
+		margin: 0 auto;
+		max-width: fit-content;
 	}
 }

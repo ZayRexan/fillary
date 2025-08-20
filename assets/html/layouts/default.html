@@ -24,6 +24,58 @@
 	<div class="site-container">
 		{{> body}}
 	</div>
+
+	<div class="modal" id="reserve">
+		<div class="modal__body">
+			<div class="modal__content">
+				<a class="modal__close link-reset close-modal" href="#header"></a>
+				<div class="modal__title">
+					Заполните форму резерва
+				</div>
+
+				<div class="modal__form">
+					<form action="#">
+						<p>
+							<span>
+								<label class="label label--name">
+									<input class="modal__input input-reset input" type="text" placeholder="Введите ваше имя">
+								</label>
+							</span>
+							<span>
+								<label class="label label--tel">
+									<input class="modal__input input-reset input" type="tel" placeholder="+7 (___) ___ __ __">
+								</label>
+							</span>
+							<span>
+								<label class="label label--date">
+									<input class="modal__input input-reset input" type="date" placeholder="Введите дату">
+								</label>
+							</span>
+							<span>
+								<label class="label label--group">
+									<input class="modal__input input-reset input" type="text" placeholder="Введите число гостей">
+								</label>
+							</span>
+							<span>
+								<label class="label label--time">
+									<input class="modal__input input-reset input" type="time" placeholder="Введите время">
+								</label>
+							</span>
+						</p>
+
+						<input class="modal__submit input-reset submit" type="submit" value="Отправить">
+					</form>
+				</div>
+
+				<p class="modal__text">
+					Указывая свои данные, вы даете согласие на обработку персональных данных в соответствии с <a
+						class="link-reset" href="#">политикой
+						конфиденциальности</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
 	<script src="js/scripts.min.js"></script>
 
 </body>

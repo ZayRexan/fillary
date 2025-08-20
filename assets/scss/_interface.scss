@@ -457,6 +457,43 @@
 	}
 }
 
+.label {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50px;
+		top: 50%;
+		width: 20px;
+		height: 20px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform: translateY(-50%);
+	}
+
+	&--name::before {
+		background-image: url('@img/icons/sprite.svg#form-people');
+	}
+
+	&--tel::before {
+		background-image: url('@img/icons/sprite.svg#form-phone');
+	}
+
+	&--date::before {
+		background-image: url('@img/icons/sprite.svg#form-date');
+	}
+
+	&--group::before {
+		background-image: url('@img/icons/sprite.svg#form-group');
+	}
+
+	&--time::before {
+		background-image: url('@img/icons/sprite.svg#form-time');
+	}
+}
+
 .input {
 	border-radius: 50px;
 	padding: 20px 40px;
@@ -465,6 +502,14 @@
 	color: var(--light-color);
 	background-color: rgb(255 255 255 / 10%);
 	@include adaptive-font(18, 10);
+
+	&.modal__input {
+		padding-left: 93px;
+		width: 100%;
+		color: var(--dark-color);
+		background-color: var(--light-color);
+		@include adaptive-font(18, 12);
+	}
 }
 
 .input-file {
